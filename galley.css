@@ -1,0 +1,169 @@
+.gallery{
+    margin: 2% 4% 2% 3% ;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 165px; */
+}
+.left-photo-space{
+    margin-right: 20px;
+}
+.middle-space{
+    margin: 0px 10px 0px 10px;
+}
+.right-photo-space{
+    /* margin-left: 150px; */
+    margin-left: 20px;
+}
+.img{
+    height: 260px;
+}
+.even-photo-gallery{
+    display: flex;
+    justify-content: center;
+    margin: 5% 10% 5% 10%;
+}
+.even-left-space{
+    margin-right: 50px;
+}
+.even-right-space{
+    margin-left: 50px;
+}
+.year-2023-24 h3{
+    font-weight: normal;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    /* background-color: black; */
+}
+.year{
+    font-size: 190%;
+    font-style: oblique;
+    color: white;
+    justify-items: center;
+    /* justify-content: center; */
+    text-align: center;
+    /* background-color: #000; */
+    padding-top: 0.5%;
+    font-weight: 900;
+  
+  }
+  
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .lightbox-content {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Add this line */
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.lightbox img {
+    max-width: 75%;
+    max-height: 85vh;
+    display: block; /* Ensure image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+  
+  .close-btn {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .lightbox-buttons {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    
+  }
+  
+  .lightbox-buttons button {
+    margin: 0 10px;
+    color: #fff;
+    background-color: rgb(84, 0, 0);
+  }
+  
+
+  .frame {
+    --b: 7px; /* border thickness */
+    --c: #0000 25%,rgb(255, 157, 107) 0; /* define the color here */
+    padding: 10px;
+    background:
+      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--c)) 0    0,
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--c)) 100% 0,
+      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--c)) 0    100%,
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--c)) 100% 100%;
+    background-size: 50px 50px; /* adjust border length here */
+    background-repeat: no-repeat;
+    transition: .6s;
+    cursor: pointer;
+  }
+
+  .lightbox-buttons button:focus,
+.lightbox-buttons button:active {
+  background-color: transparent; /* Disable hover effect on keyboard focus or active state */
+}
+
+
+/* Example media query for smaller screens */
+@media only screen and (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    margin: 2% 0;
+    text-align: -webkit-center;
+    /* margin-top: 2%; */
+  }
+  .left-photo-space,
+  .right-photo-space,
+  .middle-space {
+    margin: 0;
+    margin-top: 6%; 
+  }
+  .even-photo-gallery {
+    flex-direction: column;
+    /* margin: 5% 0; */
+    text-align: -webkit-center;
+  }
+  .even-photo-gallery {
+    display: flex;
+    justify-content: center; /* Horizontally center the items */
+    align-items: center; /* Vertically center the items */
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines if needed */
+    margin: 2% auto; /* Adjust margin as needed */
+  }
+  
+  .even-photo-gallery .img {
+    max-width: 90%; /* Ensure images don't exceed their container's width */
+    height: auto; /* Maintain aspect ratio */
+    
+  }
+  .even-left-space{
+    margin-right: 0;
+    margin-top: 6%; 
+}
+.even-right-space{
+    margin-left: 0;
+    margin-top: 6%; 
+}
+
+.image_viewer{
+  display: none;
+}
+  
+}
